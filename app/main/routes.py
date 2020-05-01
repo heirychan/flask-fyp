@@ -17,6 +17,12 @@ def before_request():
 
 
 @bp.route('/', methods=['GET', 'POST'])
+@bp.route('/ez ', methods=['GET', 'POST'])
+@login_required
+def ez():
+    return render_template('ez.html', title=_('E-Zone'))
+
+
 @bp.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
@@ -37,6 +43,24 @@ def index():
     return render_template('index.html', title=_('Home'), form=form,
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
+
+
+@bp.route('/itt ', methods=['GET', 'POST'])
+@login_required
+def itt():
+    return render_template('itt.html', title=_('IT-Time'))
+
+
+@bp.route('/technical ', methods=['GET', 'POST'])
+@login_required
+def technical():
+    return render_template('technical.html', title=_('Technical'))
+
+
+@bp.route('/animax', methods=['GET', 'POST'])
+@login_required
+def animax():
+    return render_template('animax.html', title=_('Animax'))
 
 
 @bp.route('/explore')
