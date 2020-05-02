@@ -14,20 +14,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url_for('main.index') }}">Microblog</a>
+                </button><h3>
+                <a class="navbar-brand" href="{{ url_for('main.ez') }}">E-zone</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('main.index') }}">{{ _('Home') }}</a></li>
-                    <li><a href="{{ url_for('main.explore') }}">{{ _('Explore') }}</a></li>
+                <h3 class="nav navbar-nav">
+                    <li><a href="{{ url_for('main.ez') }}"><font color="#0066ff">{{ _('Follow us') }}</font></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="TF" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            {{ _('科技焦點') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="TF">
+                            <a class="dropdown-item" href="{{ url_for('main.phone') }}">手機消息</a>
+                            <a class="dropdown-item" href="{{ url_for('main.pcnew') }}">電腦消息</a>
+                        </div>
+
+                    </li>
+                    <li><a href="{{ url_for('main.animax') }}">{{ _('遊戲動漫') }}</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="gg" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+
+                            {{ _('IT Times') }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="gg">
+                            <a class="dropdown-item" href="{{ url_for('main.ittnew') }}">最新消息</a>
+                            <a class="dropdown-item" href="{{ url_for('main.ittonly') }}">獨家情報</a>
+                        </div>
+                </li></h3>
                 </ul>
+
+
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
-                        <li><a href="{{ url_for('auth.login') }}">{{ _('Login') }}</a></li>
+                        <li><a href="{{ url_for('auth.login') }}">{{ _('登入討論區') }}</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('Profile') }}</a></li>
-                        <li><a href="{{ url_for('auth.logout') }}">{{ _('Logout') }}</a></li>
+                        <li><a href="{{ url_for('main.index') }}">{{ _('留言板') }}</a></li>
+                        <li><a href="{{ url_for('main.explore') }}">{{ _('個人紀錄') }}</a></li>
+                        <li><a href="{{ url_for('main.user', username=current_user.username) }}">{{ _('個人檔案') }}</a></li>
+                        <li><a href="{{ url_for('auth.logout') }}">{{ _('登出') }}</a></li>
                     {% endif %}
                 </ul>
             </div>

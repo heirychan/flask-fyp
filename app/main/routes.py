@@ -17,6 +17,12 @@ def before_request():
 
 
 @bp.route('/', methods=['GET', 'POST'])
+@bp.route('/ez ', methods=['GET', 'POST'])
+@login_required
+def ez():
+    return render_template('ez.html', title=_('E-Zone'))
+
+
 @bp.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
@@ -37,6 +43,84 @@ def index():
     return render_template('index.html', title=_('Home'), form=form,
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url)
+
+
+@bp.route('/intel10', methods=['GET', 'POST'])
+@login_required
+def intel10():
+    return render_template('TFocus/PC/intel10.html', title=_('intel10'))
+
+
+@bp.route('/winup', methods=['GET', 'POST'])
+@login_required
+def winup():
+    return render_template('TFocus/PC/winup.html', title=_('Windowupdate'))
+
+
+@bp.route('/sm', methods=['GET', 'POST'])
+@login_required
+def sm():
+    return render_template('TFocus/phone/sm.html', title=_('Samsung'))
+
+
+@bp.route('/ipxs', methods=['GET', 'POST'])
+@login_required
+def ipxs():
+    return render_template('TFocus/phone/ipxs.html', title=_('IPhoneXS'))
+
+
+@bp.route('/phone', methods=['GET', 'POST'])
+@login_required
+def phone():
+    return render_template('TFocus/phone.html', title=_('Phone'))
+
+
+@bp.route('/pcnew', methods=['GET', 'POST'])
+@login_required
+def pcnew():
+    return render_template('TFocus/pcnew.html', title=_('PCNew'))
+
+
+@bp.route('/intel', methods=['GET', 'POST'])
+@login_required
+def intel():
+    return render_template('itt/new/intel.html', title=_('Intel'))
+
+
+@bp.route('/covid', methods=['GET', 'POST'])
+@login_required
+def covid():
+    return render_template('itt/new/covid.html', title=_('COVID'))
+
+
+@bp.route('/wifi', methods=['GET', 'POST'])
+@login_required
+def wifi():
+    return render_template('itt/onlyme/wifi.html', title=_('WIFI'))
+
+
+@bp.route('/vm', methods=['GET', 'POST'])
+@login_required
+def vm():
+    return render_template('itt/onlyme/vm.html', title=_('vmware'))
+
+
+@bp.route('/ittnew', methods=['GET', 'POST'])
+@login_required
+def ittnew():
+    return render_template('itt/ittnew.html', title=_('IT-Timenew'))
+
+
+@bp.route('/ittonly', methods=['GET', 'POST'])
+@login_required
+def ittonly():
+    return render_template('itt/ittonly.html', title=_('IT-Timeonly'))
+
+
+@bp.route('/animax', methods=['GET', 'POST'])
+@login_required
+def animax():
+    return render_template('animax.html', title=_('Animax'))
 
 
 @bp.route('/explore')
