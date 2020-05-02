@@ -2,11 +2,11 @@
 {% block current_app_content %}
     <h1>手機消息</h1>
     <ul><h3>
-        <li><a href="{{ url_for('main.ipxs') }}"><img src="../../../static/ipxs.jpg" width="300" height="200"><font
+        <li><a href="{{ url_for('main.ipxs') }}"><img src="{{ url_for('static', filename='ipxs.jpg') }}" width="300" height="200"><font
                 color="#000000">{{ _('Apple iPhone XS 勁劈至 HK＄3899！抵玩過 iPhone SE？') }}</font></a></li>
         <br>
 
-        <li><a href="{{ url_for('main.sm') }}"><img src="../../../static/sm.jpg" width="300" height="200">
+        <li><a href="{{ url_for('main.sm') }}"><img src=".{{ url_for('static', filename='sm.jpg') }}" width="300" height="200">
             <font color="#000000">{{ _('Samsung 正開發 2 億像素感光元件！預計明年初推出') }}</font></a></li></h3>
         <br>
     </ul>
