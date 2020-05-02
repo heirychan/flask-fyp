@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block current_app_content %}
+    <h1>電腦消息</h1>
+    <ul><h3>
+        <li><a href="{{ url_for('main.intel10') }}"><img src="../../../static/intel10.png" width="300" height="200"><font
+                color="#000000">{{ _('Intel 十代 Core 正式登場！最高 10 核心‧5.3GHz Turbo 時脈') }}</font></a>
+        </li>
+        <br>
+
+        <a href="{{ url_for('main.winup') }}"><img src="../../../static/win10.jpg" width="300" height="200"><font
+                color="#000000">{{ _('微軟推 Win 10 更新 大幅提升硬碟效能') }}</font></a></h3>
+        </li>
+        <br>
+    </ul>
+{% endblock %}
