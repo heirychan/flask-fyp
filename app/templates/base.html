@@ -1,11 +1,16 @@
 {% extends 'bootstrap/base.html' %}
 
+{% block styles %}
+    {{super()}}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}"/>
+{% endblock %}
+
 {% block title %}
     {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
 {% endblock %}
 
 {% block navbar %}
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-custom">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"

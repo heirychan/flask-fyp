@@ -1,17 +1,4 @@
-2020-05-02 11:29:39,197 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:29:55,473 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:30:07,091 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:30:52,844 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:31:04,238 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:31:16,063 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:34:49,522 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:38:02,383 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:40:15,148 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:41:54,337 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 11:42:31,855 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 12:04:10,679 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 12:41:01,705 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
-2020-05-02 12:41:02,819 ERROR: Exception on /covid [GET] [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py:1891]
+2020-05-02 12:43:32,613 ERROR: Exception on /covid [GET] [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -54,7 +41,7 @@ Traceback (most recent call last):
   File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\templates\base.html", line 61, in block "content"
     {% block current_app_content %}{% endblock %}
   File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\templates\itt\new\covid.html", line 5, in block "current_app_content"
-    <img src="{{ url_for("ststic",filename="covid.jpg") }}">
+    <img src="{{ url_for("ststic",filename="covid.jpg") }}align =">
   File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
@@ -66,4 +53,45 @@ Traceback (most recent call last):
   File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'ststic' with values ['filename']. Did you mean 'static' instead?
-2020-05-02 12:43:31,838 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 12:43:46,778 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 12:45:53,893 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 12:47:59,416 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 12:48:07,835 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 12:52:55,166 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 12:53:23,053 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 13:00:44,012 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 13:01:26,120 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 13:02:16,974 INFO: Microblog startup [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\__init__.py:74]
+2020-05-02 13:03:35,942 ERROR: Exception on /wifi [GET] [in E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\app\main\routes.py", line 63, in wifi
+    return render_template('itt/new/../templates/itt/onlyme/wifi.html', title=_('WIFI'))
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "E:\ive\s2\ITP4924_IT_ICT_1( Web Application Development )\abc\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: itt/new/../templates/itt/onlyme/wifi.html
