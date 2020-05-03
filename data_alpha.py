@@ -26,3 +26,7 @@ db.session.add(f)
 db.session.add(g)
 db.session.add(h)
 db.session.commit()
+
+news = News.query.all()
+for new in news:
+    print(new.id, new.title, new.content)
