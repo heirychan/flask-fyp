@@ -10,7 +10,6 @@ e = News(title='不受新冠肺炎疫情影響 高通：5G發布如常', content
 f = News(title='Intel被淡出？傳明年出貨Mac機改用自家處理器', content='《彭博》(Bloomberg）引述消息，指蘋果（Apple）計劃 2021 年起，在最少 1 款 Mac 電腦中採用自家處理器，這意味著該公司與英特爾（Intel）自 2006 年以來的獨家合作，有機會開始走向結局。。')
 g = News(title='VMware：加速改造應用 K8s 普及在望', content='數碼轉型已席捲全球，VMware 香港及澳門總經理藍建基指出，特別在新冠肺炎疫情下網上服務推出時間更急。 在這情況下原生雲（Native Cloud）也能配合而生。隨著全球原生雲市場不斷成長， Gartner 也預計 K8s 會用於 80% 的雲端平台中。他指出 VMware 是目前全球第二大的 K8s 技術貢獻機構，地位僅次於 Google。')
 h = News(title='Wi-Fi 6E登場 增1.2 GHz可用頻寬', content='美國聯邦通訊委員會（FCC）早前投票通過「Wi-Fi 6E」標準，當中最重要的決定是開放 6GHz 範圍的白色頻段（White Space）給公眾使用，將會額外提供 1,200MHz 頻寬，相比現時 5GHz 範圍的 500Mhz，與 2.4GHz 的 60MHz 大為提升。。')
-
 db.session.add(a)
 db.session.add(b)
 db.session.add(c)
