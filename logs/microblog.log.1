@@ -1,103 +1,121 @@
-2020-03-20 15:44:45,971 ERROR: Exception on /index [GET] [in /home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py:1891]
+2020-05-04 02:28:09,966 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 02:28:18,082 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/osboxes/PycharmProjects/microblog/app/routes.py", line 29, in index
-    posts = current_user.followed_post().paginate(
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
-2020-03-20 15:48:57,438 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:43]
-2020-03-20 15:49:12,239 ERROR: Exception on /index [GET] [in /home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py:1891]
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 25, in ez
+    name = test.email
+AttributeError: 'list' object has no attribute 'email'
+2020-05-04 02:35:13,076 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 02:35:18,675 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1951, in full_dispatch_request
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1820, in handle_user_exception
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/flask_login/utils.py", line 272, in decorated_view
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/home/osboxes/PycharmProjects/microblog/app/routes.py", line 29, in index
-    posts = current_user.followed_post().paginate(
-  File "/home/osboxes/PycharmProjects/microblog/venv/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_post'
-2020-03-20 15:51:09,431 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:43]
-2020-03-20 15:53:10,445 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:43]
-2020-03-20 15:56:41,214 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:43]
-2020-03-20 15:57:02,870 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:43]
-2020-03-30 16:49:17,119 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:45]
-2020-03-31 06:39:52,795 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:47]
-2020-04-02 03:16:55,302 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:49]
-2020-04-02 03:45:24,899 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:49]
-2020-04-02 03:51:38,454 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:49]
-2020-04-08 10:54:41,771 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 11:29:19,944 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 11:29:24,682 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 11:29:28,754 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 11:29:35,832 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 11:31:28,836 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 11:32:46,131 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:52]
-2020-04-08 12:57:42,820 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:74]
-2020-04-08 12:57:49,019 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:74]
-2020-04-08 12:58:01,194 INFO: Microblog startup [in /home/osboxes/PycharmProjects/microblog/app/__init__.py:74]
-2020-04-26 17:10:38,019 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-04-26 17:12:03,373 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 03:14:30,752 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 19:04:56,424 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 20:05:35,513 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 22:45:46,791 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 22:46:45,048 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 22:59:17,183 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:04:36,805 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:19:19,529 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:23:22,117 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:26:22,669 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:33:40,888 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:34:40,929 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:41:06,162 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:41:40,795 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:42:27,766 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:42:42,017 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:43:14,996 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:43:36,226 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:43:55,003 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:45:34,507 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:48:46,132 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-02 23:50:02,498 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:02:53,827 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:05:53,350 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:10:03,732 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:10:30,906 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:33:29,580 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:34:06,558 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:34:40,718 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:36:10,156 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:37:07,899 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:37:34,189 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:38:49,447 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:40:38,005 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:41:42,331 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:45:46,884 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 00:56:20,737 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 01:42:51,162 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
-2020-05-03 01:59:50,315 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 24, in ez
+    body = News.query.get(content)
+NameError: name 'content' is not defined
+2020-05-04 02:36:00,495 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 02:52:02,457 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:03:05,296 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:03:10,950 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 23, in ez
+    all = News(name=News.title, body=News.content)
+  File "<string>", line 4, in __init__
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\orm\state.py", line 433, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\orm\state.py", line 430, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 839, in _declarative_constructor
+    raise TypeError(
+TypeError: 'name' is an invalid keyword argument for News
+2020-05-04 03:04:25,311 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:05:47,262 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:06:04,260 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:08:46,176 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:12:22,785 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:12:27,427 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 23, in ez
+    all = News(title=News.query.all(), content=News.body(News.query.all()))
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\models.py", line 103, in body
+    return News.query.get(self.content)
+AttributeError: 'list' object has no attribute 'content'
+2020-05-04 03:16:48,861 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:25:18,030 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-04 03:25:22,667 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 23, in ez
+    all = News.query.all('title')
+TypeError: all() takes 1 positional argument but 2 were given
+2020-05-04 03:25:51,274 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
