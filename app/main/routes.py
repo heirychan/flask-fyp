@@ -111,6 +111,12 @@ def vm():
     return render_template('itt/onlyme/vm.html', title=_('vmware'))
 
 
+@bp.route('/itt', methods=['GET', 'POST'])
+@login_required
+def itt():
+    return render_template('itt/itt.html', title=_('IT-Time'))
+
+
 @bp.route('/ittnew', methods=['GET', 'POST'])
 @login_required
 def ittnew():

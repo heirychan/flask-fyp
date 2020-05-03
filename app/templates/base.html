@@ -34,16 +34,15 @@
                         </ul>
                     </li>
                     <li><a href="{{ url_for('main.animax') }}">{{ _('遊戲動漫') }}</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="gg" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <li><a class="nav-link" href="{{ url_for('main.itt') }}">{{ _('IT Times') }}</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ url_for('main.ittnew') }}">最新消息</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.ittonly') }}">獨家情報</a></li>
+                            </ul>
+                        </li>
 
-                            {{ _('IT Times') }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="gg">
-                            <a class="dropdown-item" href="{{ url_for('main.ittnew') }}">最新消息</a>
-                            <a class="dropdown-item" href="{{ url_for('main.ittonly') }}">獨家情報</a>
-                        </div>
-                    </li>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}
