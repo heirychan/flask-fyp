@@ -22,6 +22,12 @@ def before_request():
 def ez():
     return render_template('ez.html', title=_('E-Zone'))
 
+@bp.route('/', methods=['GET', 'POST'])
+@bp.route('/flous ', methods=['GET', 'POST'])
+@login_required
+def flous():
+    return render_template('flous.html', title=_('E-Zone'))
+
 
 @bp.route('/index', methods=['GET', 'POST'])
 @login_required
