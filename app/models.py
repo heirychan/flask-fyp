@@ -91,7 +91,7 @@ class Post(db.Model):
         return '<Post {}>'.format(self.body)
 
 
-class News(db.Model, db.Model):
+class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(500), index=True, unique=True)
     content = db.Column(db.String(99999))
