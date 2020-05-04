@@ -134,7 +134,19 @@ def ittonly():
 @bp.route('/animax', methods=['GET', 'POST'])
 @login_required
 def animax():
-    return render_template('animax.html', title=_('Animax'))
+    return render_template('animax/animax.html', title=_('Animax'))
+
+
+@bp.route('/games', methods=['GET', 'POST'])
+@login_required
+def games():
+    return render_template('animax/games.html', title=_('Games'))
+
+
+@bp.route('/anitoy', methods=['GET', 'POST'])
+@login_required
+def anitoy():
+    return render_template('animax/anitoy.html', title=_('AnimeToy'))
 
 
 @bp.route('/explore')
