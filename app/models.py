@@ -95,6 +95,7 @@ class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(500), index=True, unique=True)
     content = db.Column(db.String(99999))
+    url = db.Column(db.String(9999))
     picture = db.Column(db.String(50), unique=True)
     time = db.Column(db.DateTime, index=True, default=datetime.utcnow())
     tech = db.relationship('Tech', backref='TF', lazy='dynamic')
