@@ -5,7 +5,7 @@
     {% for one in all %}
         <p><img src="{{ url_for('static', filename=one.TF.picture) }}" width="300" height="200"></p>
         <ul>
-            <h3><a href="{{ url_for('main.ipxs') }}"><font color="#000000">{{ one.TF.title }}</font></a></h3>
+            <h3><a href="{{ url_for(one.TF.url) }}"><font color="#000000">{{ one.TF.title }}</font></a></h3>
         </ul>
     {% endfor %}
 {% endblock %}
