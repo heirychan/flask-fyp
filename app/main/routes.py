@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime
+from app.models import User, Post, News, Tech, Anime, Network
 from app.main import bp
 
 
@@ -29,6 +29,13 @@ def ez():
 def tf():
     all = Tech.query.all()
     return render_template('TFocus/TF.html', title=_('科技焦點'), all=all)
+
+
+@bp.route('/net', methods=['GET', 'POST'])
+@login_required
+def net():
+    all = Network.query.all()
+    return render_template('Network/net.html', title=_('網絡生活'), all=all)
 
 
 @bp.route('/animax', methods=['GET', 'POST'])
@@ -67,6 +74,12 @@ def index():
                            prev_url=prev_url)
 
 
+@bp.route('/seveneleven', methods=['GET', 'POST'])
+@login_required
+def seveneleven():
+    return render_template('Network/life/7-11.html', title=_('7-11'))
+
+
 @bp.route('/intel10', methods=['GET', 'POST'])
 @login_required
 def intel10():
@@ -100,7 +113,7 @@ def phone():
 @bp.route('/pcnew', methods=['GET', 'POST'])
 @login_required
 def pcnew():
-    return render_template('TFocus/pcnew.html', title=_('PCNew'))
+    return render_template('TFocus/pcnew.html', title=_('pcnew'))
 
 
 @bp.route('/intel', methods=['GET', 'POST'])

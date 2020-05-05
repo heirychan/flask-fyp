@@ -99,6 +99,7 @@ class News(db.Model):
     picture = db.Column(db.String(50), unique=True)
     time = db.Column(db.DateTime, index=True, default=datetime.utcnow())
     tech = db.relationship('Tech', backref='TF', lazy='dynamic')
+    net = db.relationship('Network', backref='NET', lazy='dynamic')
     anime = db.relationship('Anime', backref='ANI', lazy='dynamic')
 
     def __repr__(self):
@@ -106,6 +107,16 @@ class News(db.Model):
 
 
 class Tech(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
+    st_cat = db.Column(db.String(50))
+    nd_cat = db.Column(db.String(50))
+
+    def __repr__(self):
+        return '<Picture {}>'.format(self.picture_name)
+
+
+class Network(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
     st_cat = db.Column(db.String(50))
