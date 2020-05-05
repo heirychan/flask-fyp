@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech
+from app.models import User, Post, News, Tech, Anime
 from app.main import bp
 
 
@@ -24,12 +24,18 @@ def ez():
     return render_template('ez.html', title=_('E-Zone'), all=all)
 
 
-@bp.route('/', methods=['GET', 'POST'])
 @bp.route('/tf', methods=['GET', 'POST'])
 @login_required
 def tf():
     all = Tech.query.all()
     return render_template('TFocus/TF.html', title=_('科技焦點'), all=all)
+
+
+@bp.route('/animax', methods=['GET', 'POST'])
+@login_required
+def animax():
+    all = Anime.query.all()
+    return render_template('animax/animax.html', title=_('遊戲動漫'), all=all)
 
 
 @bp.route('/', methods=['GET', 'POST'])
@@ -139,12 +145,6 @@ def ittonly():
     return render_template('itt/ittonly.html', title=_('IT-Timeonly'))
 
 
-@bp.route('/animax', methods=['GET', 'POST'])
-@login_required
-def animax():
-    return render_template('animax/animax.html', title=_('Animax'))
-
-
 @bp.route('/games', methods=['GET', 'POST'])
 @login_required
 def games():
@@ -155,6 +155,12 @@ def games():
 @login_required
 def anitoy():
     return render_template('animax/anitoy.html', title=_('AnimeToy'))
+
+
+@bp.route('/moon', methods=['GET', 'POST'])
+@login_required
+def sailor():
+    return render_template('animax/anime/sailormoon.html', title=_('美少女戰士'))
 
 
 @bp.route('/explore')
