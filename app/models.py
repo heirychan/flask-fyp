@@ -95,8 +95,20 @@ class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(500), index=True, unique=True)
     content = db.Column(db.String(99999))
+    picture = db.Column(db.String(50), unique=True)
+    time = db.Column(db.DateTime, index=True, default=datetime.utcnow())
+    tech = db.relationship('Tech', backref='TF', lazy='dynamic')
 
     def __repr__(self):
         return '<News {}>'.format(self.title)
 
+
+class Tech(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
+    st_cat = db.Column(db.String(50))
+    nd_cat = db.Column(db.String(50))
+
+    def __repr__(self):
+        return '<Picture {}>'.format(self.picture_name)
 
