@@ -24,11 +24,14 @@ def ez():
     return render_template('ez.html', title=_('E-Zone'), all=all)
 
 
-@bp.route('/tf', methods=['GET', 'POST'])
+@bp.route('/<category>', methods=['GET', 'POST'])
 @login_required
-def tf():
-    all = Tech.query.all()
-    return render_template('TFocus/TF.html', title=_('科技焦點'), all=all)
+def tf(category):
+    if category == '科技焦點':
+        all = Tech.query.all()
+    else:
+        all = Tech.query.filter_by(nd_cat=category)
+    return render_template('TFocus/TF.html', title=_('category'), all=all, cat=category)
 
 
 @bp.route('/net', methods=['GET', 'POST'])
@@ -102,18 +105,6 @@ def sm():
 @login_required
 def ipxs():
     return render_template('TFocus/phone/ipxs.html', title=_('IPhoneXS'))
-
-
-@bp.route('/phone', methods=['GET', 'POST'])
-@login_required
-def phone():
-    return render_template('TFocus/phone.html', title=_('Phone'))
-
-
-@bp.route('/pcnew', methods=['GET', 'POST'])
-@login_required
-def pcnew():
-    return render_template('TFocus/pcnew.html', title=_('pcnew'))
 
 
 @bp.route('/intel', methods=['GET', 'POST'])
