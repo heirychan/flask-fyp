@@ -83,6 +83,12 @@ def index():
                            prev_url=prev_url)
 
 
+@bp.route('/greencar', methods=['GET', 'POST'])
+@login_required
+def greencar():
+    return render_template('video/greencar.html', title=_('car'))
+
+
 @bp.route('/seveneleven', methods=['GET', 'POST'])
 @login_required
 def seveneleven():
