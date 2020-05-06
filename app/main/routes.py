@@ -45,7 +45,7 @@ def tf(st_category, nd_category, table):
             all = Evaluation.query.all()
         else:
             all = Evaluation.query.filter_by(st_cat=st_category, nd_cat=nd_category)
-    elif table == 'ITT':
+    else:
         if nd_category == 'None':
             all = Ittime.query.all()
         else:
@@ -141,24 +141,6 @@ def wifi():
 @login_required
 def vm():
     return render_template('itt/onlyme/vm.html', title=_('vmware'))
-
-
-@bp.route('/itt', methods=['GET', 'POST'])
-@login_required
-def itt():
-    return render_template('itt/itt.html', title=_('IT-Time'))
-
-
-@bp.route('/ittnew', methods=['GET', 'POST'])
-@login_required
-def ittnew():
-    return render_template('itt/ittnew.html', title=_('IT-Timenew'))
-
-
-@bp.route('/ittonly', methods=['GET', 'POST'])
-@login_required
-def ittonly():
-    return render_template('itt/ittonly.html', title=_('IT-Timeonly'))
 
 
 @bp.route('/moon', methods=['GET', 'POST'])
