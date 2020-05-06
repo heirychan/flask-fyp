@@ -18,14 +18,12 @@ def before_request():
 
 @bp.route('/', methods=['GET', 'POST'])
 @bp.route('/ez ', methods=['GET', 'POST'])
-@login_required
 def ez():
     all = News.query.all()
     return render_template('ez.html', title=_('E-Zone'), all=all)
 
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
-@login_required
 def tf(st_category, nd_category, table):
     if table == 'TF':
         if nd_category == 'None':
