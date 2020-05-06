@@ -101,6 +101,7 @@ class News(db.Model):
     tech = db.relationship('Tech', backref='TF', lazy='dynamic')
     net = db.relationship('Network', backref='NET', lazy='dynamic')
     anime = db.relationship('Anime', backref='ANI', lazy='dynamic')
+    eva = db.relationship('Evaluation', backref='EVA', lazy='dynamic')
 
     def __repr__(self):
         return '<News {}>'.format(self.title)
@@ -127,6 +128,16 @@ class Network(db.Model):
 
 
 class Anime(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
+    st_cat = db.Column(db.String(50))
+    nd_cat = db.Column(db.String(50))
+
+    def __repr__(self):
+        return '<Picture {}>'.format(self.picture_name)
+
+
+class Evaluation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
     st_cat = db.Column(db.String(50))
