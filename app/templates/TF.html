@@ -27,6 +27,9 @@
         {% elif table == 'EVA' %}
             <p><img src="{{ url_for('static', filename=one.EVA.picture) }}" width="300" height="300"></p>
             <h3><a href="{{ url_for(one.EVA.url) }}"><font color="#000000">{{ one.EVA.title }}</font></a></h3>
+        {% elif table == 'ITT' %}
+            <p><img src="{{ url_for('static', filename=one.ITT.picture) }}" width="300" height="300"></p>
+            <h3><a href="{{ url_for(one.ITT.url) }}"><font color="#000000">{{ one.ITT.title }}</font></a></h3>
         {% endif %}
     {% endfor %}
 {% endblock %}

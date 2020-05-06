@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime, Network, Evaluation
+from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime
 from app.main import bp
 
 
@@ -45,6 +45,11 @@ def tf(st_category, nd_category, table):
             all = Evaluation.query.all()
         else:
             all = Evaluation.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    elif table == 'ITT':
+        if nd_category == 'None':
+            all = Ittime.query.all()
+        else:
+            all = Ittime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
     return render_template('TF.html', title=_('ezone'), all=all,
                            st_cat=st_category, nd_cat=nd_category, table=table)
 

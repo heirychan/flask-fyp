@@ -61,8 +61,8 @@
                         <li class="nav-item dropdown">
                             <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url_for('main.ittnew') }}">最新消息</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.ittonly') }}">獨家情報</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='最新消息', table='ITT') }}">最新消息</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='獨家情報', table='ITT') }}">獨家情報</a></li>
                             </ul>
                         </li>
 
