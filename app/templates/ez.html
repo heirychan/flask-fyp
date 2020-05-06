@@ -3,6 +3,11 @@
     <a>EZ</a>
     <h1>Test</h1>
     {% for one in all %}
-      <p>{{one.title}}: {{ one.content }}</p>
+        {% if one.picture == 'emoji.jpg' %}
+            <p><img src="{{ url_for('static', filename=one.picture) }}" width="300" height="300"></p>
+        {% else %}
+            <p><img src="{{ url_for('static', filename=one.picture) }}" width="300" height="200"></p>
+        {% endif %}
+        <h3><a href="{{ url_for(one.url) }}"><font color="#000000">{{ one.title }}</font></a></h3>
     {% endfor %}
 {% endblock %}
