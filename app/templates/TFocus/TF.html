@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block current_app_content %}
-    <h1>{{ cat }}</h1>
-    {% for one in all %}
-        <p><img src="{{ url_for('static', filename=one.TF.picture) }}" width="300" height="200"></p>
-        <h3><a href="{{ url_for(one.TF.url) }}"><font color="#000000">{{ one.TF.title }}</font></a></h3>
-    {% endfor %}
-{% endblock %}

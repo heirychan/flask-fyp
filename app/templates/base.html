@@ -25,36 +25,36 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="nav navbar-nav">
                     <li><a href="{{ url_for('main.flous') }}"><font color="#0066ff">{{ _('Follow us') }}</font></a></li>
-                    <li><a class="nav-link" href="{{ url_for('main.tf', category='科技焦點') }}">{{ _('科技焦點') }}</a></li>
+                    <li><a class="nav-link" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='None', table='TF') }}">{{ _('科技焦點') }}</a></li>
                     <li class="nav-item dropdown">
                         <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url_for('main.tf', category='手機消息') }}">手機消息</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.tf', category='電腦消息') }}">電腦消息</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='手機消息', table='TF') }}">手機消息</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='電腦消息', table='TF') }}">電腦消息</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link" href="{{ url_for('main.net') }}">{{ _('網絡生活') }}</a></li>
+                    <li><a class="nav-link" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='None', table='NET') }}">{{ _('網絡生活') }}</a></li>
                     <li class="nav-item dropdown">
                         <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">網絡熱話</a></li>
-                            <li><a class="dropdown-item" href="#">生活情報</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='網絡熱話', table='NET') }}">網絡熱話</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='生活情報', table='NET') }}">生活情報</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link" href="{{ url_for('main.animax') }}">{{ _('遊戲動漫') }}</a></li>
+                    <li><a class="nav-link" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='None', table='ANI') }}">{{ _('遊戲動漫') }}</a></li>
                         <li class="nav-item dropdown">
                             <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url_for('main.games') }}">電競遊戲</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.anitoy') }}">動漫玩具</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='電競遊戲', table='ANI') }}">電競遊戲</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='動漫玩具', table='ANI') }}">動漫玩具</a></li>
                             </ul>
                         </li>
-                    <li><a class="nav-link" href="{{ url_for('main.evalua') }}">{{ _('教學評測') }}</a></li>
+                    <li><a class="nav-link" href="{{ url_for('main.tf', st_category='教學評測', nd_category='None', table='EVA') }}">{{ _('教學評測') }}</a></li>
                         <li class="nav-item dropdown">
                             <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">應用秘技</a></li>
-                                <li><a class="dropdown-item" href="#">新品測試</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='教學評測', nd_category='應用秘技', table='EVA') }}">應用秘技</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='教學評測', nd_category='新品測試', table='EVA') }}">新品測試</a></li>
                             </ul>
                         </li>
                     <li><a class="nav-link" href="{{ url_for('main.itt') }}">{{ _('IT Times') }}</a></li>

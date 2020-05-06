@@ -24,35 +24,31 @@ def ez():
     return render_template('ez.html', title=_('E-Zone'), all=all)
 
 
-@bp.route('/<category>', methods=['GET', 'POST'])
+@bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
 @login_required
-def tf(category):
-    if category == '科技焦點':
-        all = Tech.query.all()
-    else:
-        all = Tech.query.filter_by(nd_cat=category)
-    return render_template('TFocus/TF.html', title=_('category'), all=all, cat=category)
-
-
-@bp.route('/net', methods=['GET', 'POST'])
-@login_required
-def net():
-    all = Network.query.all()
-    return render_template('Network/net.html', title=_('網絡生活'), all=all)
-
-
-@bp.route('/animax', methods=['GET', 'POST'])
-@login_required
-def animax():
-    all = Anime.query.all()
-    return render_template('animax/animax.html', title=_('遊戲動漫'), all=all)
-
-
-@bp.route('/evalua', methods=['GET', 'POST'])
-@login_required
-def evalua():
-    all = Evaluation.query.all()
-    return render_template('evaluation/evalua.html', title=_('教學評測'), all=all)
+def tf(st_category, nd_category, table):
+    if table == 'TF':
+        if nd_category == 'None':
+            all = Tech.query.all()
+        else:
+            all = Tech.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    elif table == 'NET':
+        if nd_category == 'None':
+            all = Network.query.all()
+        else:
+            all = Network.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    elif table == 'ANI':
+        if nd_category == 'None':
+            all = Anime.query.all()
+        else:
+            all = Anime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    elif table == 'EVA':
+        if nd_category == 'None':
+            all = Evaluation.query.all()
+        else:
+            all = Evaluation.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    return render_template('TF.html', title=_('ezone'), all=all,
+                           st_cat=st_category, nd_cat=nd_category, table=table)
 
 
 @bp.route('/', methods=['GET', 'POST'])
@@ -154,18 +150,6 @@ def ittnew():
 @login_required
 def ittonly():
     return render_template('itt/ittonly.html', title=_('IT-Timeonly'))
-
-
-@bp.route('/games', methods=['GET', 'POST'])
-@login_required
-def games():
-    return render_template('animax/games.html', title=_('Games'))
-
-
-@bp.route('/anitoy', methods=['GET', 'POST'])
-@login_required
-def anitoy():
-    return render_template('animax/anitoy.html', title=_('AnimeToy'))
 
 
 @bp.route('/moon', methods=['GET', 'POST'])
