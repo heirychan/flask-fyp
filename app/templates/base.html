@@ -3,6 +3,7 @@
 {% block styles %}
     {{super()}}
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}"/>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}"/>
 {% endblock %}
 
 {% block title %}
@@ -95,6 +96,13 @@
         {# current_application content needs to be provided in the current_app_content block #}
         {% block current_app_content %}{% endblock %}
     </div>
+    {% block footer %}
+        <footer class="footer-custom">
+            <div class="container text-center">
+                Copyright &copy; abc XD
+            </div>
+        </footer>
+    {% endblock footer %}
 {% endblock %}
 
 {% block scripts %}
