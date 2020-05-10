@@ -149,6 +149,24 @@ def emoji():
     return render_template('evaluation/apply/emoji.html', title=_('Emoji'))
 
 
+@bp.route('/pcandroid', methods=['GET', 'POST'])
+@login_required
+def pcandroid():
+    return render_template('evaluation/apply/pcandroid.html', title=_('模擬器'))
+
+
+@bp.route('/blacksha', methods=['GET', 'POST'])
+@login_required
+def blacksha():
+    return render_template('evaluation/newtest/blacksha.html', title=_('黑鯊 3 電競手機'))
+
+
+@bp.route('/sama31', methods=['GET', 'POST'])
+@login_required
+def sama31():
+    return render_template('evaluation/newtest/sama31.html', title=_('Samsung Galaxy A31'))
+
+
 @bp.route('/explore')
 @login_required
 def explore():
