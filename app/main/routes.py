@@ -149,6 +149,12 @@ def sailor():
     return render_template('animax/anime/sailormoon.html', title=_('美少女戰士'))
 
 
+@bp.route('/ucc', methods=['GET', 'POST'])
+@login_required
+def ucc():
+    return render_template('animax/anime/ucc.html', title=_('新世紀福音戰士'))
+
+
 @bp.route('/emoji', methods=['GET', 'POST'])
 @login_required
 def emoji():
