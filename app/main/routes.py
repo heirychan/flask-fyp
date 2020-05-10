@@ -83,6 +83,12 @@ def index():
                            prev_url=prev_url)
 
 
+@bp.route('/greencar', methods=['GET', 'POST'])
+@login_required
+def greencar():
+    return render_template('video/greencar.html', title=_('car'))
+
+
 @bp.route('/seveneleven', methods=['GET', 'POST'])
 @login_required
 def seveneleven():
@@ -165,6 +171,24 @@ def blacksha():
 @login_required
 def sama31():
     return render_template('evaluation/newtest/sama31.html', title=_('Samsung Galaxy A31'))
+
+
+@bp.route('/omask', methods=['GET', 'POST'])
+@login_required
+def omask():
+    return render_template('Network/hot/omask.html', title=_('開窿口罩'))
+
+
+@bp.route('/av', methods=['GET', 'POST'])
+@login_required
+def av():
+    return render_template('Network/hot/av.html', title=_('睇 AV 出「意外」！'))
+
+
+@bp.route('/dyson', methods=['GET', 'POST'])
+@login_required
+def dyson():
+    return render_template('Network/life/dyson.html', title=_('Dyson 旗艦體'))
 
 
 @bp.route('/explore')
