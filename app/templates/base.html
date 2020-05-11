@@ -66,7 +66,7 @@
                                 <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='獨家情報', table='ITT') }}">獨家情報</a></li>
                             </ul>
                         </li>
-
+                    <li><a class="nav-link" href="{{ url_for('main.tf', st_category='活動獎賞', nd_category='None', table='RW') }}">{{ _('活動獎賞') }}</a></li>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
                     {% if current_user.is_anonymous %}

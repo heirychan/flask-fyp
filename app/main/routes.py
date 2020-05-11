@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from flask_babel import _, get_locale
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime
+from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward
 from app.main import bp
 
 
@@ -46,11 +46,13 @@ def tf(st_category, nd_category, table):
             news = Evaluation.query.all()
         else:
             news = Evaluation.query.filter_by(st_cat=st_category, nd_cat=nd_category)
-    else:
+    elif table == 'ITT':
         if nd_category == 'None':
             news = Ittime.query.all()
         else:
             news = Ittime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    else:
+        news = Reward.query.all()
     return render_template('TF.html', title=_('ezone'), all=all, news=news,
                            st_cat=st_category, nd_cat=nd_category, table=table)
 
@@ -148,6 +150,12 @@ def vm():
 @login_required
 def sailor():
     return render_template('animax/anime/sailormoon.html', title=_('美少女戰士'))
+
+
+@bp.route('/Sumikko Gurashi', methods=['GET', 'POST'])
+@login_required
+def sg():
+    return render_template('reward/sg.html', title=_('角落小夥伴'))
 
 
 @bp.route('/ucc', methods=['GET', 'POST'])
