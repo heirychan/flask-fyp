@@ -1,74 +1,74 @@
 .footer-custom::before {
-    display:block;
-    width:100vw;
-    height:4px;
-    background-color:#F39801;
-    content:'';
-    position:relative;
-    left:0;
-    top:-25px
+    display: block;
+    width: 100vw;
+    height: 4px;
+    background-color: #F39801;
+    content: '';
+    position: relative;
+    left: 0;
+    top: -25px
 }
 
 .footer-custom {
-    padding:1em 0 0;
-    width:100%;
-    background:#F39801;
-    color:#333
+    padding: 1em 0 0;
+    width: 100%;
+    background: #F39801;
+    color: #333
 }
 
 .footer-custom a {
-    color:#000;
-    text-decoration:none
+    color: #000;
+    text-decoration: none
 }
 
 .footer-custom a:hover {
-    color:#fff;
-    text-decoration:none
+    color: #fff;
+    text-decoration: none
 }
 
 .footer-custom h2,#ezone-footer h3,#ezone-footer h4 {
-    color:#666
+    color: #666
 }
 
 .footer-custom h3 {
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:16px;
-    font-weight:700;
-    margin-bottom:3px
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3px
 }
 
 .footer-custom [class*=col] {
-    padding-bottom:18px
+    padding-bottom: 18px
 }
 
 .footer-custom .btn {
-    color:#eee
+    color: #eee
 }
 
 .footer-custom .float {
-    float:left;
-    margin-right:10%
+    float: left;
+    margin-right: 10%
 }
 
 .footer-custom ul {
-    padding:0;
-    margin:0
+    padding: 0;
+    margin: 0
 }
 
 .footer-custom ul li {
-    padding:0;
-    list-style:none;
-    height:1.3em
+    padding: 0;
+    list-style: none;
+    height: 1.3em
 }
 
 .footer-custom ul li a {
-    color:#333;
-    text-decoration:none!important;
-    z-index:1;
-    font-size:.9em
+    color: #333;
+    text-decoration: none!important;
+    z-index: 1;
+    font-size: .9em
 }
 
 .footer-custom ul li a:hover {
-    color:#fff
+    color: #fff
 }
