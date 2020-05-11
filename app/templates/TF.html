@@ -14,22 +14,22 @@
     {% else %}
         <h1>{{ st_cat }}: {{ nd_cat }}</h1>
     {% endif %}
-    {% for one in all %}
+    {% for new in news %}
         {% if table == 'TF' %}
-            <p><img src="{{ url_for('static', filename=one.TF.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(one.TF.url) }}"><font color="#000000">{{ one.TF.title }}</font></a></h3>
+            <p><img src="{{ url_for('static', filename=new.TF.picture) }}" width="300" height="200"></p>
+            <h3><a href="{{ url_for(new.TF.url) }}"><font color="#000000">{{ new.TF.title }}</font></a></h3>
         {% elif table == 'NET' %}
-            <p><img src="{{ url_for('static', filename=one.NET.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(one.NET.url) }}"><font color="#000000">{{ one.NET.title }}</font></a></h3>
+            <p><img src="{{ url_for('static', filename=new.NET.picture) }}" width="300" height="200"></p>
+            <h3><a href="{{ url_for(new.NET.url) }}"><font color="#000000">{{ new.NET.title }}</font></a></h3>
         {% elif table == 'ANI' %}
-            <p><img src="{{ url_for('static', filename=one.ANI.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(one.ANI.url) }}"><font color="#000000">{{ one.ANI.title }}</font></a></h3>
+            <p><img src="{{ url_for('static', filename=new.ANI.picture) }}" width="300" height="200"></p>
+            <h3><a href="{{ url_for(new.ANI.url) }}"><font color="#000000">{{ new.ANI.title }}</font></a></h3>
         {% elif table == 'EVA' %}
-            <p><img src="{{ url_for('static', filename=one.EVA.picture) }}" width="300" height="300"></p>
-            <h3><a href="{{ url_for(one.EVA.url) }}"><font color="#000000">{{ one.EVA.title }}</font></a></h3>
+            <p><img src="{{ url_for('static', filename=new.EVA.picture) }}" width="300" height="300"></p>
+            <h3><a href="{{ url_for(new.EVA.url) }}"><font color="#000000">{{ new.EVA.title }}</font></a></h3>
         {% else %}
-            <p><img src="{{ url_for('static', filename=one.ITT.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(one.ITT.url) }}"><font color="#000000">{{ one.ITT.title }}</font></a></h3>
+            <p><img src="{{ url_for('static', filename=new.ITT.picture) }}" width="300" height="200"></p>
+            <h3><a href="{{ url_for(new.ITT.url) }}"><font color="#000000">{{ new.ITT.title }}</font></a></h3>
         {% endif %}
     {% endfor %}
 {% endblock %}

@@ -25,32 +25,33 @@ def ez():
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
 def tf(st_category, nd_category, table):
+    all = News.query.all()
     if table == 'TF':
         if nd_category == 'None':
-            all = Tech.query.all()
+            news = Tech.query.all()
         else:
-            all = Tech.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+            news = Tech.query.filter_by(st_cat=st_category, nd_cat=nd_category)
     elif table == 'NET':
         if nd_category == 'None':
-            all = Network.query.all()
+            news = Network.query.all()
         else:
-            all = Network.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+            news = Network.query.filter_by(st_cat=st_category, nd_cat=nd_category)
     elif table == 'ANI':
         if nd_category == 'None':
-            all = Anime.query.all()
+            news = Anime.query.all()
         else:
-            all = Anime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+            news = Anime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
     elif table == 'EVA':
         if nd_category == 'None':
-            all = Evaluation.query.all()
+            news = Evaluation.query.all()
         else:
-            all = Evaluation.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+            news = Evaluation.query.filter_by(st_cat=st_category, nd_cat=nd_category)
     else:
         if nd_category == 'None':
-            all = Ittime.query.all()
+            news = Ittime.query.all()
         else:
-            all = Ittime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
-    return render_template('TF.html', title=_('ezone'), all=all,
+            news = Ittime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
+    return render_template('TF.html', title=_('ezone'), all=all, news=news,
                            st_cat=st_category, nd_cat=nd_category, table=table)
 
 
