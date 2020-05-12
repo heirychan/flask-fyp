@@ -2,6 +2,7 @@ from datetime import datetime
 from flask import render_template, flash, redirect, url_for, request, g
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
+from sqlalchemy import func
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
 from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward
@@ -20,7 +21,8 @@ def before_request():
 @bp.route('/ez ', methods=['GET', 'POST'])
 def ez():
     all = News.query.all()
-    return render_template('ez.html', title=_('E-Zone'), all=all)
+    tech = Tech.query.order_by(func.random()).limit(4)
+    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech)
 
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
