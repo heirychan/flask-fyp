@@ -164,6 +164,18 @@ def ucc():
     return render_template('animax/anime/ucc.html', title=_('新世紀福音戰士'))
 
 
+@bp.route('/tokyo', methods=['GET', 'POST'])
+@login_required
+def tokyo():
+    return render_template('animax/game/tokyo.html', title=_('TGS2020'))
+
+
+@bp.route('/ps5', methods=['GET', 'POST'])
+@login_required
+def ps5():
+    return render_template('animax/game/ps5.html', title=_('PS5'))
+
+
 @bp.route('/emoji', methods=['GET', 'POST'])
 @login_required
 def emoji():
