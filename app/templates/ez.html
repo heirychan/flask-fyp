@@ -30,11 +30,16 @@
     <a>EZ</a>
     <h1>Test</h1>
     {% for one in all %}
-        {% if one.picture == 'emoji.jpg' %}
+        <div class="card" style="width: 18rem;">
+            {% if one.picture == 'emoji.jpg' %}
             <p><img src="{{ url_for('static', filename=one.picture) }}" width="300" height="300"></p>
-        {% else %}
+            {% else %}
             <p><img src="{{ url_for('static', filename=one.picture) }}" width="300" height="200"></p>
-        {% endif %}
-        <h3><a href="{{ url_for(one.url) }}"><font color="#000000">{{ one.title }}</font></a></h3>
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title"><a href="{{ url_for(one.url) }}"><font color="#000000">{{ one.title }}</font></a></h5>
+                <a href="{{ url_for(one.url) }}" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
     {% endfor %}
 {% endblock %}
