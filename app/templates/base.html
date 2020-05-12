@@ -30,40 +30,40 @@
                     <li class="nav-item dropdown">
                         <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='手機消息', table='TF') }}">手機消息</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='電腦消息', table='TF') }}">電腦消息</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='手機消息', table='TF') }}">{{ _('手機消息') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='科技焦點', nd_category='電腦消息', table='TF') }}">{{ _('電腦消息') }}</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='None', table='NET') }}">{{ _('網絡生活') }}</a></li>
                     <li class="nav-item dropdown">
                         <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='網絡熱話', table='NET') }}">網絡熱話</a></li>
-                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='生活情報', table='NET') }}">生活情報</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='網絡熱話', table='NET') }}">{{ _('網絡熱話') }}</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='網絡生活', nd_category='生活情報', table='NET') }}">{{ _('生活情報') }}</a></li>
                         </ul>
                     </li>
                     <li><a class="nav-link" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='None', table='ANI') }}">{{ _('遊戲動漫') }}</a></li>
                         <li class="nav-item dropdown">
                             <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='電競遊戲', table='ANI') }}">電競遊戲</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='動漫玩具', table='ANI') }}">動漫玩具</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='電競遊戲', table='ANI') }}">{{ _('電競遊戲') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='動漫玩具', table='ANI') }}">{{ _('動漫玩具') }}</a></li>
                             </ul>
                         </li>
                     <li><a class="nav-link" href="{{ url_for('main.tf', st_category='教學評測', nd_category='None', table='EVA') }}">{{ _('教學評測') }}</a></li>
                         <li class="nav-item dropdown">
                             <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='教學評測', nd_category='應用秘技', table='EVA') }}">應用秘技</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='教學評測', nd_category='新品測試', table='EVA') }}">新品測試</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='教學評測', nd_category='應用秘技', table='EVA') }}">{{ _('應用秘技') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='教學評測', nd_category='新品測試', table='EVA') }}">{{ _('新品測試') }}</a></li>
                             </ul>
                         </li>
                     <li><a class="nav-link" href="{{ url_for('main.tf', st_category='IT Times', nd_category='None', table='ITT') }}">{{ _('IT Times') }}</a></li>
                         <li class="nav-item dropdown">
                             <a class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='最新消息', table='ITT') }}">最新消息</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='獨家情報', table='ITT') }}">獨家情報</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='最新消息', table='ITT') }}">{{ _('最新消息') }}</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for('main.tf', st_category='IT Times', nd_category='獨家情報', table='ITT') }}">{{ _('獨家情報') }}</a></li>
                             </ul>
                         </li>
                     <li><a class="nav-link" href="{{ url_for('main.tf', st_category='活動獎賞', nd_category='None', table='RW') }}">{{ _('活動獎賞') }}</a></li>
@@ -98,8 +98,52 @@
     </div>
     {% block footer %}
         <footer class="footer-custom">
-            <div class="container text-center">
-                Copyright &copy; abc XD
+            <div class="container">
+                <div class="col-md-2 col-xs-6">
+                    <h3>
+                        <a href="{{ url_for('main.tf', st_category='科技焦點', nd_category='None', table='TF') }}">{{ _('科技焦點') }}</a>
+                    </h3>
+                    <ul>
+                        <li><a href="{{ url_for('main.tf', st_category='科技焦點', nd_category='手機消息', table='TF') }}">{{ _('手機消息') }}</a></li>
+                        <li><a href="{{ url_for('main.tf', st_category='科技焦點', nd_category='電腦消息', table='TF') }}">{{ _('電腦消息') }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>
+                        <a href="{{ url_for('main.tf', st_category='網絡生活', nd_category='None', table='NET') }}">{{ _('網絡生活') }}</a>
+                    </h3>
+                    <ul>
+                        <li><a href="{{ url_for('main.tf', st_category='網絡生活', nd_category='網絡熱話', table='NET') }}">{{ _('網絡熱話') }}</a></li>
+                        <li><a href="{{ url_for('main.tf', st_category='網絡生活', nd_category='生活情報', table='NET') }}">{{ _('生活情報') }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>
+                        <a href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='None', table='ANI') }}">{{ _('遊戲動漫') }}</a>
+                    </h3>
+                    <ul>
+                        <li><a href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='電競遊戲', table='ANI') }}">{{ _('電競遊戲') }}</a></li>
+                        <li><a href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='動漫玩具', table='ANI') }}">{{ _('動漫玩具') }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>
+                        <a href="{{ url_for('main.tf', st_category='教學評測', nd_category='None', table='EVA') }}">{{ _('教學評測') }}</a>
+                    </h3>
+                    <ul>
+                        <li><a href="{{ url_for('main.tf', st_category='教學評測', nd_category='應用秘技', table='EVA') }}">{{ _('應用秘技') }}</a></li>
+                        <li><a href="{{ url_for('main.tf', st_category='教學評測', nd_category='新品測試', table='EVA') }}">{{ _('新品測試') }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <h3>
+                        <a href="{{ url_for('main.tf', st_category='IT Times', nd_category='None', table='ITT') }}">{{ _('IT Times') }}</a>
+                    </h3>
+                    <ul>
+                        <li><a href="{{ url_for('main.tf', st_category='IT Times', nd_category='最新消息', table='ITT') }}">{{ _('最新消息') }}</a></li>
+                        <li><a href="{{ url_for('main.tf', st_category='IT Times', nd_category='獨家情報', table='ITT') }}">{{ _('獨家情報') }}</a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     {% endblock footer %}
