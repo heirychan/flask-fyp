@@ -35,7 +35,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <a href="{{ url_for('main.tf', st_category='科技焦點', nd_category='None', table='TF') }}">
-                                    <h2>{{ _('科技焦點') }}</h2>
+                                    <h2 class="table-title"><font color="#000000">{{ _('科技焦點') }}</font></h2>
                                 </a>
                             </div>
                         </div>
@@ -55,11 +55,18 @@
                                 {% endfor %}
                             </div>
                         </div>
+                        <div class="col-md-12 col-xs-12 text-center mb30">
+                        <a href="{{ url_for('main.tf', st_category='科技焦點', nd_category='None', table='TF') }}" class="btn btn-sm btn-primary">
+                            View More...
+                        </a>
+                    </div>
+                        <div class="col-md-12 text-center banner-ads">
+                        XD It is under construction XD
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <a>EZ</a>
     <h1>Test</h1>
