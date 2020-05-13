@@ -5,7 +5,7 @@ from flask_babel import _, get_locale
 from sqlalchemy import func
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward
+from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward, Video
 from app.main import bp
 
 
@@ -22,7 +22,13 @@ def before_request():
 def ez():
     all = News.query.all()
     tech = Tech.query.order_by(func.random()).limit(4)
-    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech)
+    hot = Video.query.order_by(func.random()).limit(4)
+    network = Network.query.order_by(func.random()).limit(4)
+    anime = Anime.query.order_by(func.random()).limit(4)
+    evaluation = Evaluation.query.order_by(func.random()).limit(4)
+    itttime = Ittime.query.order_by(func.random()).limit(4)
+    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, hot=hot, network=network,
+                           anime=anime, evaluation=evaluation, itttime=itttime)
 
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
