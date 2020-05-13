@@ -21,13 +21,14 @@ def before_request():
 @bp.route('/ez ', methods=['GET', 'POST'])
 def ez():
     all = News.query.all()
-    tech = Tech.query.order_by(func.random()).limit(4)
+    tech = Tech.query.order_by(func.random()).offset(2)
+    techv2 = tech.limit(2)
     hot = Video.query.order_by(func.random()).limit(4)
     network = Network.query.order_by(func.random()).limit(4)
     anime = Anime.query.order_by(func.random()).limit(4)
     evaluation = Evaluation.query.order_by(func.random()).limit(4)
     itttime = Ittime.query.order_by(func.random()).limit(4)
-    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, hot=hot, network=network,
+    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, techv2=techv2, hot=hot, network=network,
                            anime=anime, evaluation=evaluation, itttime=itttime)
 
 

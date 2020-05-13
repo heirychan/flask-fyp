@@ -1,0 +1,117 @@
+2020-05-14 02:12:24,871 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 31, in ez
+    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, techv2=techv2, hot=hot, network=network,
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\templates\ez.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\templates\base.html", line 98, in block "content"
+    {% block current_app_content %}{% endblock %}
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\templates\ez.html", line 60, in block "current_app_content"
+    {% for news in techv2 %}
+TypeError: 'bool' object is not iterable
+2020-05-14 02:14:01,152 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:15:52,742 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:16:51,282 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:16:52,484 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 27, in ez
+    print(news[0])
+TypeError: 'Tech' object is not subscriptable
+2020-05-14 02:17:08,769 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:17:25,742 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:17:51,093 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:18:18,676 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:18:38,804 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:21:20,140 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:25:12,024 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:25:13,159 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 24, in ez
+    tech = Tech.session.query.order_by(func.random()).limit(2)
+AttributeError: type object 'Tech' has no attribute 'session'
+2020-05-14 02:29:34,365 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:30:03,541 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:37:09,533 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:37:10,880 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 30, in ez
+    return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, techv2=techv2, hot=hot, network=network,
+NameError: name 'techv2' is not defined
+2020-05-14 02:37:30,541 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:37:44,334 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:37:56,658 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:38:24,132 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:40:09,137 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:40:38,571 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:40:59,552 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:41:31,266 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:42:54,893 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-14 02:49:39,432 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]

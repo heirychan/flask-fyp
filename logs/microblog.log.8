@@ -1,0 +1,121 @@
+2020-05-13 22:42:31,023 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 26, in ez
+    techv2 = Tech.query.filter(Tech.picture_name != news.TF.picture_name).order_by(func.random()).limit(2)
+AttributeError: 'News' object has no attribute 'picture_name'
+2020-05-13 22:43:09,216 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 22:43:32,369 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 22:43:35,411 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 228, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'picture'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 26, in ez
+    techv2 = Tech.query.filter(Tech.TF.picture != news.TF.picture).order_by(func.random()).limit(2)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\orm\attributes.py", line 230, in __getattr__
+    util.raise_(
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Tech.TF has an attribute 'picture'
+2020-05-13 22:44:17,868 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 22:44:19,151 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 26, in ez
+    techv2 = Tech.query.filter(picture_name=news.TF.picture).order_by(func.random()).limit(2)
+TypeError: filter() got an unexpected keyword argument 'picture_name'
+2020-05-13 22:44:45,583 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 22:51:47,270 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 22:51:48,244 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 25, in ez
+    techv2 = Tech.query(tech).order_by(func.random()).limit(2)
+TypeError: 'BaseQuery' object is not callable
+2020-05-13 23:13:03,685 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 23:13:04,825 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 25, in ez
+    techv2 = Tech.query().order_by(func.random()).limit(2)
+TypeError: 'BaseQuery' object is not callable
+2020-05-13 23:14:03,932 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]
+2020-05-13 23:14:05,141 ERROR: Exception on / [GET] [in C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\s2905\Desktop\EA Project\abc\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\s2905\Desktop\EA Project\abc\app\main\routes.py", line 25, in ez
+    techv2 = Tech.query().order_by(func.random()).limit(2)
+TypeError: 'BaseQuery' object is not callable
+2020-05-13 23:19:06,384 INFO: Microblog startup [in C:\Users\s2905\Desktop\EA Project\abc\app\__init__.py:74]

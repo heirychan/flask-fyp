@@ -67,3 +67,37 @@ h2.table-title::after, h2.table-title::before {
 h2.table-title::after {
     right: -50px
 }
+
+.table-image {
+    overflow: hidden;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center center
+}
+
+.table-card {
+    width: 100%;
+    float: left;
+    position: relative;
+    background: #fff;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.11);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,.11);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.11);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    top: 2px
+}
+
+.table-card:hover {
+    text-decoration: none;
+    -webkit-box-shadow: 0 14px 25px -2px rgba(0,0,0,.14);
+    -moz-box-shadow: 0 14px 25px -2px rgba(0,0,0,.14);
+    box-shadow: 0 14px 25px -2px rgba(0,0,0,.14);
+    top: -2px
+}
+
+.table-card .v-align {
+    padding: 5px 10px 0;
+}
