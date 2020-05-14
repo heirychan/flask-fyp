@@ -30,9 +30,12 @@
         {% elif table == 'ITT' %}
             <p><img src="{{ url_for('static', filename=new.ITT.picture) }}" width="300" height="200"></p>
             <h3><a href="{{ url_for(new.ITT.url) }}"><font color="#000000">{{ new.ITT.title }}</font></a></h3>
-        {% else %}
+        {% elif table == 'RW' %}
             <p><img src="{{ url_for('static', filename=new.RW.picture) }}" width="300" height="200"></p>
             <h3><a href="{{ url_for(new.RW.url) }}"><font color="#000000">{{ new.RW.title }}</font></a></h3>
+        {% else %}
+            <p><img src="{{ url_for('static', filename=new.VDO.picture) }}" width="300" height="200"></p>
+            <h3><a href="{{ url_for(new.VDO.url) }}"><font color="#000000">{{ new.VDO.title }}</font></a></h3>
         {% endif %}
     {% endfor %}
 {% endblock %}

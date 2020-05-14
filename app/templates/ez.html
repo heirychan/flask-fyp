@@ -47,7 +47,7 @@
                                     <a href="{{ url_for(news.TF.url) }}" class="table-card text-center">
                                         <div class="card" style="display: inline-block; width: 100%; height: 100%;">
                                             <div class="table-image">
-                                                <img src="{{ url_for('static', filename=news.TF.picture) }}" class="img-responsive center-block">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
                                             </div>
                                             <div class="v-align">
                                                 <div class="card-body">
@@ -64,7 +64,7 @@
                                     <a href="{{ url_for(news.TF.url) }}" class="table-card text-center">
                                         <div class="card" style="display: inline-block; width: 100%; height: 100%;">
                                             <div class="table-image">
-                                                <img src="{{ url_for('static', filename=news.TF.picture) }}" class="img-responsive center-block">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
                                             </div>
                                             <div class="v-align">
                                                 <div class="card-body">
@@ -84,25 +84,305 @@
                         </a>
                     </div>
                         <div class="col-md-12 text-center banner-ads">
-                        XD It is under construction XD
+                        {% for ad in ads %}
+                            <a href="{{ ad.url }}">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{{ url_for('main.tf', st_category='熱門影片', nd_category='None', table='VDO') }}">
+                                    <h2 class="table-title"><font color="#000000">{{ _('熱門影片') }}</font></h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                            {% for news in hot %}
+                            {% if loop.index % 2 == 0 %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.VDO.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.VDO.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                            {% else %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.VDO.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.VDO.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 text-center mb30">
+                        <a href="{{ url_for('main.tf', st_category='熱門影片', nd_category='None', table='VDO') }}" class="btn btn-sm btn-primary">
+                            View More...
+                        </a>
+                    </div>
+                        <div class="col-md-12 text-center banner-ads">
+                        {% for ad in ads %}
+                            <a href="{{ ad.url }}">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{{ url_for('main.tf', st_category='網絡生活', nd_category='None', table='NET') }}">
+                                    <h2 class="table-title"><font color="#000000">{{ _('網絡生活') }}</font></h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                            {% for news in network %}
+                            {% if loop.index % 2 == 0 %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.NET.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.NET.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                            {% else %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.NET.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.NET.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 text-center mb30">
+                        <a href="{{ url_for('main.tf', st_category='網絡生活', nd_category='None', table='NET') }}" class="btn btn-sm btn-primary">
+                            View More...
+                        </a>
+                    </div>
+                        <div class="col-md-12 text-center banner-ads">
+                        {% for ad in ads %}
+                            <a href="{{ ad.url }}">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='None', table='ANI') }}">
+                                    <h2 class="table-title"><font color="#000000">{{ _('遊戲動漫') }}</font></h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                            {% for news in anime %}
+                            {% if loop.index % 2 == 0 %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.ANI.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.ANI.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                            {% else %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.ANI.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.ANI.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 text-center mb30">
+                        <a href="{{ url_for('main.tf', st_category='遊戲動漫', nd_category='None', table='ANI') }}" class="btn btn-sm btn-primary">
+                            View More...
+                        </a>
+                    </div>
+                        <div class="col-md-12 text-center banner-ads">
+                        {% for ad in ads %}
+                            <a href="{{ ad.url }}">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{{ url_for('main.tf', st_category='教學評測', nd_category='None', table='EVA') }}">
+                                    <h2 class="table-title"><font color="#000000">{{ _('教學評測') }}</font></h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                            {% for news in evaluation %}
+                            {% if loop.index % 2 == 0 %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.EVA.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.EVA.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                            {% else %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.EVA.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.EVA.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 text-center mb30">
+                        <a href="{{ url_for('main.tf', st_category='教學評測', nd_category='None', table='EVA') }}" class="btn btn-sm btn-primary">
+                            View More...
+                        </a>
+                    </div>
+                        <div class="col-md-12 text-center banner-ads">
+                        {% for ad in ads %}
+                            <a href="{{ ad.url }}">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="{{ url_for('main.tf', st_category='IT Times', nd_category='None', table='ITT') }}">
+                                    <h2 class="table-title"><font color="#000000">{{ _('IT Times') }}</font></h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                            {% for news in itttime %}
+                            {% if loop.index % 2 == 0 %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.ITT.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.ITT.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                            {% else %}
+                                <div class="col-md-6">
+                                    <a href="{{ url_for(news.ITT.url) }}" class="table-card text-center">
+                                        <div class="card" style="display: inline-block; width: 100%; height: 100%;">
+                                            <div class="table-image">
+                                                <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
+                                            </div>
+                                            <div class="v-align">
+                                                <div class="card-body">
+                                                    <h3 class="card-title"><font color="#000000">{{ news.ITT.title }}</font></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% endif %}
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 text-center mb30">
+                        <a href="{{ url_for('main.tf', st_category='IT Times', nd_category='None', table='ITT') }}" class="btn btn-sm btn-primary">
+                            View More...
+                        </a>
+                    </div>
+                        <div class="col-md-12 text-center banner-ads">
+                        {% for ad in ads %}
+                            <a href="{{ ad.url }}">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            </a>
+                        {% endfor %}
                     </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <a>EZ</a>
-    <h1>Test</h1>
-    {% for one in all %}
-        <div class="card" style="width: 18rem;">
-            {% if one.picture == 'emoji.jpg' %}
-            <p><img src="{{ url_for('static', filename=one.picture) }}" width="300" height="300"></p>
-            {% else %}
-            <p><img src="{{ url_for('static', filename=one.picture) }}" width="300" height="200"></p>
-            {% endif %}
-            <div class="card-body">
-                <h5 class="card-title"><a href="{{ url_for(one.url) }}"><font color="#000000">{{ one.title }}</font></a></h5>
-            </div>
-        </div>
-    {% endfor %}
 {% endblock %}

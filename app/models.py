@@ -104,6 +104,7 @@ class News(db.Model):
     eva = db.relationship('Evaluation', backref='EVA', lazy='dynamic')
     ittime = db.relationship('Ittime', backref='ITT', lazy='dynamic')
     reward = db.relationship('Reward', backref='RW', lazy='dynamic')
+    video = db.relationship('Video', backref='VDO', lazy='dynamic')
 
     def __repr__(self):
         return '<News {}>'.format(self.title)

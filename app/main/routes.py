@@ -5,7 +5,7 @@ from flask_babel import _, get_locale
 from sqlalchemy import func
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward, Video
+from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward, Video, Ads
 from app.main import bp
 
 
@@ -27,8 +27,9 @@ def ez():
     anime = Anime.query.order_by(func.random()).limit(4)
     evaluation = Evaluation.query.order_by(func.random()).limit(4)
     itttime = Ittime.query.order_by(func.random()).limit(4)
+    ads = Ads.query.order_by(func.random()).limit(1)
     return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, hot=hot, network=network,
-                           anime=anime, evaluation=evaluation, itttime=itttime)
+                           anime=anime, evaluation=evaluation, itttime=itttime, ads=ads)
 
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
@@ -59,8 +60,10 @@ def tf(st_category, nd_category, table):
             news = Ittime.query.all()
         else:
             news = Ittime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
-    else:
+    elif table == 'RW':
         news = Reward.query.all()
+    else:
+        news = Video.query.all()
     return render_template('TF.html', title=_('ezone'), all=all, news=news,
                            st_cat=st_category, nd_cat=nd_category, table=table)
 

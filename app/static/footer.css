@@ -1,6 +1,6 @@
 .footer-custom::before {
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 4px;
     background-color: #F39801;
     content: '';
