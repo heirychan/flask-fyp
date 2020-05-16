@@ -33,7 +33,7 @@ def ez():
 
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
-def tf(st_category, nd_category, table):
+def topic(st_category, nd_category, table):
     all = News.query.all()
     if table == 'TF':
         if nd_category == 'None':
@@ -64,7 +64,7 @@ def tf(st_category, nd_category, table):
         news = Reward.query.all()
     else:
         news = Video.query.all()
-    return render_template('TF.html', title=_('ezone'), all=all, news=news,
+    return render_template('Topic.html', title=_('ezone'), all=all, news=news,
                            st_cat=st_category, nd_cat=nd_category, table=table)
 
 
