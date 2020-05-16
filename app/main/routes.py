@@ -36,6 +36,8 @@ def ez():
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
 def topic(st_category, nd_category, table):
     all = News.query.all()
+    ads = Ads.query.filter_by(big=False).order_by(func.random()).limit(1)
+    adsb = Ads.query.filter_by(big=True).order_by(func.random()).limit(1)
     if table == 'TF':
         if nd_category == 'None':
             news = Tech.query.all()
@@ -66,7 +68,7 @@ def topic(st_category, nd_category, table):
     else:
         news = Video.query.all()
     return render_template('topic.html', title=_('ezone'), all=all, news=news,
-                           st_cat=st_category, nd_cat=nd_category, table=table)
+                           st_cat=st_category, nd_cat=nd_category, table=table, ads=ads, adsb=adsb)
 
 
 @bp.route('/', methods=['GET', 'POST'])
