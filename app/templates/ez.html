@@ -383,6 +383,37 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="visible-md visible-lg banner-ads">
+                            <div class="center-block">
+                                <div style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
+                                    {% for ad in adsb %}
+                                        <iframe frameborder="0" src="{{ url_for('static', filename=ad.picture_name) }}" scrolling="no"
+                                        marginwidth="0" marginheight="0" width="300" height="600" style="border: 0px; vertical-align: bottom;"></iframe>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="visible-md visible-lg banner-ads">
+                            <div class="center-block">
+                                <div style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
+                                    {% for ad in adsb %}
+                                        <iframe frameborder="0" src="{{ url_for('static', filename=ad.picture_name) }}" scrolling="no"
+                                        marginwidth="0" marginheight="0" width="300" height="600" style="border: 0px; vertical-align: bottom;"></iframe>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -65,7 +65,7 @@ def topic(st_category, nd_category, table):
         news = Reward.query.all()
     else:
         news = Video.query.all()
-    return render_template('Topic.html', title=_('ezone'), all=all, news=news,
+    return render_template('topic.html', title=_('ezone'), all=all, news=news,
                            st_cat=st_category, nd_cat=nd_category, table=table)
 
 
