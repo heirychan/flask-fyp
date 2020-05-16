@@ -85,8 +85,8 @@
                     </div>
                         <div class="col-md-12 text-center banner-ads">
                         {% for ad in ads %}
-                            <a href="{{ ad.url }}">
-                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            <a href="{{ ad.url }}" target="_blank">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                             </a>
                         {% endfor %}
                     </div>
@@ -143,8 +143,8 @@
                     </div>
                         <div class="col-md-12 text-center banner-ads">
                         {% for ad in ads %}
-                            <a href="{{ ad.url }}">
-                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            <a href="{{ ad.url }}" target="_blank">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                             </a>
                         {% endfor %}
                     </div>
@@ -201,8 +201,8 @@
                     </div>
                         <div class="col-md-12 text-center banner-ads">
                         {% for ad in ads %}
-                            <a href="{{ ad.url }}">
-                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            <a href="{{ ad.url }}" target="_blank">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                             </a>
                         {% endfor %}
                     </div>
@@ -259,8 +259,8 @@
                     </div>
                         <div class="col-md-12 text-center banner-ads">
                         {% for ad in ads %}
-                            <a href="{{ ad.url }}">
-                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            <a href="{{ ad.url }}" target="_blank">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                             </a>
                         {% endfor %}
                     </div>
@@ -317,8 +317,8 @@
                     </div>
                         <div class="col-md-12 text-center banner-ads">
                         {% for ad in ads %}
-                            <a href="{{ ad.url }}">
-                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            <a href="{{ ad.url }}" target="_blank">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                             </a>
                         {% endfor %}
                     </div>
@@ -375,8 +375,8 @@
                     </div>
                         <div class="col-md-12 text-center banner-ads">
                         {% for ad in ads %}
-                            <a href="{{ ad.url }}">
-                                <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                            <a href="{{ ad.url }}" target="_blank">
+                                <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                             </a>
                         {% endfor %}
                     </div>
@@ -390,8 +390,9 @@
                             <div class="center-block">
                                 <div style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
                                     {% for ad in adsb %}
-                                        <iframe frameborder="0" src="{{ url_for('static', filename=ad.picture_name) }}" scrolling="no"
-                                        marginwidth="0" marginheight="0" width="300" height="600" style="border: 0px; vertical-align: bottom;"></iframe>
+                                        <a href="{{ ad.url }}" target="_blank">
+                                            <img src="{{ url_for('static', filename=ad.picture_name) }}" width="300" height="600" />
+                                        </a>
                                     {% endfor %}
                                 </div>
                             </div>
@@ -404,8 +405,9 @@
                             <div class="center-block">
                                 <div style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
                                     {% for ad in adsb %}
-                                        <iframe frameborder="0" src="{{ url_for('static', filename=ad.picture_name) }}" scrolling="no"
-                                        marginwidth="0" marginheight="0" width="300" height="600" style="border: 0px; vertical-align: bottom;"></iframe>
+                                        <a href="{{ ad.url }}" target="_blank">
+                                            <img src="{{ url_for('static', filename=ad.picture_name) }}" width="300" height="600" />
+                                        </a>
                                     {% endfor %}
                                 </div>
                             </div>

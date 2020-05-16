@@ -101,3 +101,12 @@ h2.table-title::after {
 .table-card .v-align {
     padding: 5px 10px 0;
 }
+
+.slide-image {
+    width: 100%;
+    max-height: 650px;
+    padding-bottom: 50%;
+    display: block;
+    background-position: center center;
+    background-size: 100%
+}
