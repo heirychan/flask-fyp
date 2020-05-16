@@ -165,6 +165,7 @@ class Ads(db.Model):
     name = db.Column(db.String(50))
     picture_name = db.Column(db.String(50))
     url = db.Column(db.String(9999))
+    big = db.Column(db.Boolean(create_constraint=False, _create_events=False), nullable=False, server_default='False')
 
     def __repr__(self):
         return '<Ads_name {}>'.format(self.name)
