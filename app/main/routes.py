@@ -27,9 +27,10 @@ def ez():
     anime = Anime.query.order_by(func.random()).limit(4)
     evaluation = Evaluation.query.order_by(func.random()).limit(4)
     itttime = Ittime.query.order_by(func.random()).limit(4)
-    ads = Ads.query.order_by(func.random()).limit(1)
+    ads = Ads.query.filter_by(big=False).order_by(func.random()).limit(1)
+    adsb = Ads.query.filter_by(big=True).order_by(func.random()).limit(1)
     return render_template('ez.html', title=_('E-Zone'), all=all, tech=tech, hot=hot, network=network,
-                           anime=anime, evaluation=evaluation, itttime=itttime, ads=ads)
+                           anime=anime, evaluation=evaluation, itttime=itttime, ads=ads, adsb=adsb)
 
 
 @bp.route('/<st_category>/<nd_category>/<table>', methods=['GET', 'POST'])
@@ -101,6 +102,24 @@ def index():
 @login_required
 def greencar():
     return render_template('video/greencar.html', title=_('car'))
+
+
+@bp.route('/ccmask', methods=['GET', 'POST'])
+@login_required
+def ccmask():
+    return render_template('video/ccmask.html', title=_('ccmask'))
+
+
+@bp.route('/fever', methods=['GET', 'POST'])
+@login_required
+def fever():
+    return render_template('video/fever.html', title=_('fever'))
+
+
+@bp.route('/sptmask', methods=['GET', 'POST'])
+@login_required
+def sptmask():
+    return render_template('video/sptmask.html', title=_('sptmask'))
 
 
 @bp.route('/seveneleven', methods=['GET', 'POST'])
