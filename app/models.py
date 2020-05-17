@@ -98,6 +98,7 @@ class News(db.Model):
     url = db.Column(db.String(9999))
     picture = db.Column(db.String(50), unique=True)
     time = db.Column(db.DateTime, index=True, default=datetime.utcnow())
+    more = db.relationship('Extend', backref='EX', lazy='dynamic')
     tech = db.relationship('Tech', backref='TF', lazy='dynamic')
     net = db.relationship('Network', backref='NET', lazy='dynamic')
     anime = db.relationship('Anime', backref='ANI', lazy='dynamic')
@@ -110,6 +111,16 @@ class News(db.Model):
 
     def __repr__(self):
         return '<News {}>'.format(self.title)
+
+
+class Extend(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
+    nd_con = db.Column(db.String(99999))
+    rd_con = db.Column(db.String(99999))
+
+    def __repr__(self):
+        return '<Picture {}>'.format(self.picture_name)
 
 
 class Tech(db.Model):

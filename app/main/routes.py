@@ -5,8 +5,8 @@ from flask_babel import _, get_locale
 from sqlalchemy import func
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime, Network, Evaluation,\
-    Ittime, Reward, Video, Ads, Special, Editor
+from app.models import User, Post, News, Tech, Anime, Network, Evaluation, \
+    Ittime, Reward, Video, Ads, Special, Editor, Extend
 from app.main import bp
 
 
@@ -73,8 +73,19 @@ def topic(st_category, nd_category, table):
         news = Special.query.all()
     else:
         news = Video.query.all()
-    return render_template('topic.html', title=_('ezone'), all=all, news=news, st_cat=st_category,
+    return render_template('topic.html', title=_('E-Zone'), all=all, news=news, st_cat=st_category,
                            nd_cat=nd_category, table=table, ads=ads, adsb=adsb, edit=edit)
+
+
+@bp.route('/<content>/<picture>', methods=['GET', 'POST'])
+def tfb(content, picture):
+    all = News.query.order_by(News.time.desc()).all()
+    ads = Ads.query.filter_by(big=False).order_by(func.random()).limit(1)
+    adsb = Ads.query.filter_by(big=True).order_by(func.random()).limit(1)
+    body = Extend.query.filter_by(picture_name=picture).all()
+    tech = Tech.query.filter(~Tech.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    return render_template('TFocus/TFB.html', title=_('E-Zone'), all=all, ads=ads, adsb=adsb, body=body,
+                           content=content, picture=picture, tech=tech)
 
 
 @bp.route('/', methods=['GET', 'POST'])

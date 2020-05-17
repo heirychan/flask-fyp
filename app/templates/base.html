@@ -5,10 +5,11 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}"/>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}"/>
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='ez.css') }}"/>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='content.css') }}"/>
 {% endblock %}
 
 {% block title %}
-    {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
+    {% if title %}{{ title }} - Ezone{% else %}{{ _('Welcome to Ezone') }}{% endif %}
 {% endblock %}
 
 {% block navbar %}
