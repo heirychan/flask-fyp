@@ -5,7 +5,7 @@ from flask_babel import _, get_locale
 from sqlalchemy import func
 from app import current_app, db
 from app.main.forms import EditProfileForm, PostForm
-from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward, Video, Ads
+from app.models import User, Post, News, Tech, Anime, Network, Evaluation, Ittime, Reward, Video, Ads, Special
 from app.main import bp
 
 
@@ -65,6 +65,8 @@ def topic(st_category, nd_category, table):
             news = Ittime.query.filter_by(st_cat=st_category, nd_cat=nd_category)
     elif table == 'RW':
         news = Reward.query.all()
+    elif table == 'SP':
+        news = Special.query.all()
     else:
         news = Video.query.all()
     return render_template('topic.html', title=_('ezone'), all=all, news=news,
@@ -244,7 +246,7 @@ def av():
     return render_template('Network/hot/av.html', title=_('睇 AV 出「意外」！'))
 
 
-@bp.route('/av', methods=['GET', 'POST'])
+@bp.route('/computer', methods=['GET', 'POST'])
 @login_required
 def computer():
     return render_template('special/computer.html', title=_('香港電腦通訊節'))
