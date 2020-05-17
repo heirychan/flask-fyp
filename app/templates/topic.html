@@ -12,21 +12,16 @@
         {% if table == 'TF' %}
             {% include 'TFocus/TF.html' %}
         {% elif table == 'NET' %}
-            <p><img src="{{ url_for('static', filename=new.NET.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(new.NET.url) }}"><font color="#000000">{{ new.NET.title }}</font></a></h3>
+            {% include 'Network/Network.html' %}
         {% elif table == 'ANI' %}
             {% include 'animax/anime.html' %}
         {% elif table == 'EVA' %}
-            <p><img src="{{ url_for('static', filename=new.EVA.picture) }}" width="300" height="300"></p>
-            <h3><a href="{{ url_for(new.EVA.url) }}"><font color="#000000">{{ new.EVA.title }}</font></a></h3>
+            {% include 'evaluation/evaluation.html' %}
         {% elif table == 'ITT' %}
-            <p><img src="{{ url_for('static', filename=new.ITT.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(new.ITT.url) }}"><font color="#000000">{{ new.ITT.title }}</font></a></h3>
+            {% include 'itt/itt.html' %}
         {% elif table == 'RW' %}
-            <p><img src="{{ url_for('static', filename=new.RW.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(new.RW.url) }}"><font color="#000000">{{ new.RW.title }}</font></a></h3>
+            {% include 'reward/reward.html' %}
         {% else %}
-            <p><img src="{{ url_for('static', filename=new.VDO.picture) }}" width="300" height="200"></p>
-            <h3><a href="{{ url_for(new.VDO.url) }}"><font color="#000000">{{ new.VDO.title }}</font></a></h3>
+            {% include 'video/video.html' %}
         {% endif %}
 {% endblock %}
