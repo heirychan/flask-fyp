@@ -244,6 +244,12 @@ def av():
     return render_template('Network/hot/av.html', title=_('睇 AV 出「意外」！'))
 
 
+@bp.route('/av', methods=['GET', 'POST'])
+@login_required
+def computer():
+    return render_template('special/computer.html', title=_('香港電腦通訊節'))
+
+
 @bp.route('/dyson', methods=['GET', 'POST'])
 @login_required
 def dyson():
