@@ -106,6 +106,7 @@ class News(db.Model):
     reward = db.relationship('Reward', backref='RW', lazy='dynamic')
     video = db.relationship('Video', backref='VDO', lazy='dynamic')
     special = db.relationship('Special', backref='SP', lazy='dynamic')
+    editor = db.relationship('Editor', backref='ED', lazy='dynamic')
 
     def __repr__(self):
         return '<News {}>'.format(self.title)
@@ -192,6 +193,15 @@ class Reward(db.Model):
 
 
 class Special(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
+    st_cat = db.Column(db.String(50))
+
+    def __repr__(self):
+        return '<Picture {}>'.format(self.picture_name)
+
+
+class Editor(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     picture_name = db.Column(db.String(50), db.ForeignKey('news.picture'))
     st_cat = db.Column(db.String(50))
