@@ -118,6 +118,54 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>{{ _('編輯推介') }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                        <div class="list-group">
+                            {% for new in edit %}
+                                <button type="button" class="list-group-item" onclick="{{ new.ED.url }}">
+                                    <img src="{{ url_for('static', filename=new.picture_name) }}">
+                                    {{ new.ED.title }}
+                                </button>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="visible-md visible-lg banner-ads">
+                            <div class="center-block">
+                                <div style="border: 0pt none; display: inline-block; width: 300px; height: 600px;">
+                                    {% for ad in adsb %}
+                                        <a href="{{ ad.url }}" target="_blank">
+                                            <img src="{{ url_for('static', filename=ad.picture_name) }}" width="300" height="600" />
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>{{ _('最新內容') }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-left">
+                        <div class="list-group">
+                            {% for new in all %}
+                                <button type="button" class="list-group-item" onclick="{{ new.url }}">
+                                    {{ new.title }}
+                                </button>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
             </div>
         </div>
