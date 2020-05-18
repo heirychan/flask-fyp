@@ -79,13 +79,43 @@ def topic(st_category, nd_category, table):
 
 @bp.route('/<content>/<picture>', methods=['GET', 'POST'])
 def tfb(content, picture):
+    table = ""
     all = News.query.order_by(News.time.desc()).all()
     ads = Ads.query.filter_by(big=False).order_by(func.random()).limit(1)
     adsb = Ads.query.filter_by(big=True).order_by(func.random()).limit(1)
     body = Extend.query.filter_by(picture_name=picture).all()
-    tech = Tech.query.filter(~Tech.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    tech = Tech.query.filter_by(picture_name=picture).all()
+    hot = Video.query.filter_by(picture_name=picture).all()
+    network = Network.query.filter_by(picture_name=picture).all()
+    anime = Anime.query.filter_by(picture_name=picture).all()
+    evaluation = Evaluation.query.filter_by(picture_name=picture).all()
+    itttime = Ittime.query.filter_by(picture_name=picture).all()
+    if table == "":
+        for result in tech:
+            table = result.st_cat
+        news = Tech.query.filter(~Tech.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    if table == "":
+        for result in hot:
+            table = result.st_cat
+        news = Video.query.filter(~Video.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    if table == "":
+        for result in network:
+            table = result.st_cat
+        news = Network.query.filter(~Network.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    if table == "":
+        for result in anime:
+            table = result.st_cat
+        news = Anime.query.filter(~Anime.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    if table == "":
+        for result in evaluation:
+            table = result.st_cat
+        news = Evaluation.query.filter(~Evaluation.picture_name.in_([picture])).order_by(func.random()).limit(2)
+    if table == "":
+        for result in itttime:
+            table = result.st_cat
+        news = Ittime.query.filter(~Ittime.picture_name.in_([picture])).order_by(func.random()).limit(2)
     return render_template('TFocus/TFB.html', title=_('E-Zone'), all=all, ads=ads, adsb=adsb, body=body,
-                           content=content, picture=picture, tech=tech)
+                           content=content, picture=picture, news=news, table=table)
 
 
 @bp.route('/', methods=['GET', 'POST'])

@@ -1,11 +1,16 @@
 {% extends "base.html" %}
+
+{% block title %}
+    {{ title }} - {{ content }}
+{% endblock %}
+
 {% block current_app_content %}
     <div class="container">
         <div class="row">
             <div class="text-center banner-ads">
                 {% for ad in ads %}
                     <a href="{{ ad.url }}">
-                        <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                        <img src="{{ url_for('static', filename=ad.picture_name) }}" />
                     </a>
                 {% endfor %}
             </div>
@@ -26,12 +31,13 @@
                         <div class="col-md-12 text-center banner-ads">
                             {% for ad in ads %}
                                 <a href="{{ ad.url }}">
-                                    <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                                    <img src="{{ url_for('static', filename=ad.picture_name) }}"
+                                    style="max-width: 700px" />
                                 </a>
                             {% endfor %}
                         </div>
                         {% for one in body %}
-                        {% if one.nd_con == "" %}
+                        {% if one.nd_con == None %}
                             {% for element in one.EX.content.splitlines() %}
                                 <p>{{ element }}</p>
                             {% endfor %}
@@ -49,16 +55,54 @@
                             {% endfor %}
                         {% endif %}
                         {% endfor %}
-                        {% for new in tech %}
-                            <p>
-                                【相關報道】
-                                <a href="{{ url_for(new.TF.url, picture=new.picture_name, content=new.TF.title) }}">{{ new.TF.title }}</a>
-                            </p>
-                        {% endfor %}
+                        {% if table == '科技焦點' %}
+                            {% for new in news %}
+                                <p>
+                                    【相關報道】
+                                    <a href="{{ url_for(new.TF.url, picture=new.picture_name, content=new.TF.title) }}">{{ new.TF.title }}</a>
+                                </p>
+                            {% endfor %}
+                        {% elif table == '熱門影片' %}
+                            {% for new in news %}
+                                <p>
+                                    【相關報道】
+                                    <a href="{{ url_for(new.VDO.url, picture=new.picture_name, content=new.VDO.title) }}">{{ new.VDO.title }}</a>
+                                </p>
+                            {% endfor %}
+                        {% elif table == '網絡生活' %}
+                            {% for new in news %}
+                                <p>
+                                    【相關報道】
+                                    <a href="{{ url_for(new.NET.url, picture=new.picture_name, content=new.NET.title) }}">{{ new.NET.title }}</a>
+                                </p>
+                            {% endfor %}
+                        {% elif table == '遊戲動漫' %}
+                            {% for new in news %}
+                                <p>
+                                    【相關報道】
+                                    <a href="{{ url_for(new.ANI.url, picture=new.picture_name, content=new.ANI.title) }}">{{ new.ANI.title }}</a>
+                                </p>
+                            {% endfor %}
+                        {% elif table == '教學評測' %}
+                            {% for new in news %}
+                                <p>
+                                    【相關報道】
+                                    <a href="{{ url_for(new.EVA.url, picture=new.picture_name, content=new.EVA.title) }}">{{ new.EVA.title }}</a>
+                                </p>
+                            {% endfor %}
+                        {% elif table == 'IT Times' %}
+                            {% for new in news %}
+                                <p>
+                                    【相關報道】
+                                    <a href="{{ url_for(new.ITT.url, picture=new.picture_name, content=new.ITT.title) }}">{{ new.ITT.title }}</a>
+                                </p>
+                            {% endfor %}
+                        {% endif %}
                         <div class="text-center banner-ads">
                             {% for ad in ads %}
                                 <a href="{{ ad.url }}">
-                                    <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                                    <img src="{{ url_for('static', filename=ad.picture_name) }}"
+                                    style="max-width: 700px" />
                                 </a>
                             {% endfor %}
                         </div>
