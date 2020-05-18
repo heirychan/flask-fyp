@@ -147,58 +147,10 @@ def index():
                            prev_url=prev_url)
 
 
-@bp.route('/moon', methods=['GET', 'POST'])
-@login_required
-def sailor():
-    return render_template('animax/anime/sailormoon.html', title=_('美少女戰士'))
-
-
 @bp.route('/Sumikko Gurashi', methods=['GET', 'POST'])
 @login_required
 def sg():
     return render_template('reward/sg.html', title=_('角落小夥伴'))
-
-
-@bp.route('/ucc', methods=['GET', 'POST'])
-@login_required
-def ucc():
-    return render_template('animax/anime/ucc.html', title=_('新世紀福音戰士'))
-
-
-@bp.route('/tokyo', methods=['GET', 'POST'])
-@login_required
-def tokyo():
-    return render_template('animax/game/tokyo.html', title=_('TGS2020'))
-
-
-@bp.route('/ps5', methods=['GET', 'POST'])
-@login_required
-def ps5():
-    return render_template('animax/game/ps5.html', title=_('PS5'))
-
-
-@bp.route('/emoji', methods=['GET', 'POST'])
-@login_required
-def emoji():
-    return render_template('evaluation/apply/emoji.html', title=_('Emoji'))
-
-
-@bp.route('/pcandroid', methods=['GET', 'POST'])
-@login_required
-def pcandroid():
-    return render_template('evaluation/apply/pcandroid.html', title=_('模擬器'))
-
-
-@bp.route('/blacksha', methods=['GET', 'POST'])
-@login_required
-def blacksha():
-    return render_template('evaluation/newtest/blacksha.html', title=_('黑鯊 3 電競手機'))
-
-
-@bp.route('/sama31', methods=['GET', 'POST'])
-@login_required
-def sama31():
-    return render_template('evaluation/newtest/sama31.html', title=_('Samsung Galaxy A31'))
 
 
 @bp.route('/computer', methods=['GET', 'POST'])
