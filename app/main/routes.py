@@ -148,54 +148,6 @@ def index():
                            prev_url=prev_url)
 
 
-@bp.route('/greencar', methods=['GET', 'POST'])
-@login_required
-def greencar():
-    return render_template('video/greencar.html', title=_('car'))
-
-
-@bp.route('/ccmask', methods=['GET', 'POST'])
-@login_required
-def ccmask():
-    return render_template('video/ccmask.html', title=_('ccmask'))
-
-
-@bp.route('/fever', methods=['GET', 'POST'])
-@login_required
-def fever():
-    return render_template('video/fever.html', title=_('fever'))
-
-
-@bp.route('/sptmask', methods=['GET', 'POST'])
-@login_required
-def sptmask():
-    return render_template('video/sptmask.html', title=_('sptmask'))
-
-
-@bp.route('/intel', methods=['GET', 'POST'])
-@login_required
-def intel():
-    return render_template('itt/new/intel.html', title=_('Intel'))
-
-
-@bp.route('/covid', methods=['GET', 'POST'])
-@login_required
-def covid():
-    return render_template('itt/new/covid.html', title=_('COVID'))
-
-
-@bp.route('/wifi', methods=['GET', 'POST'])
-@login_required
-def wifi():
-    return render_template('itt/onlyme/wifi.html', title=_('WIFI'))
-
-
-@bp.route('/vm', methods=['GET', 'POST'])
-@login_required
-def vm():
-    return render_template('itt/onlyme/vm.html', title=_('vmware'))
-
-
 @bp.route('/moon', methods=['GET', 'POST'])
 @login_required
 def sailor():
