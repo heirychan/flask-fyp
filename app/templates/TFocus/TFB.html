@@ -36,6 +36,31 @@
                                 </a>
                             {% endfor %}
                         </div>
+                        {% if table == '熱門影片' %}
+                        {% for one in body %}
+                        {% if one.nd_con == None %}
+                            {% for element in one.EX.content.splitlines() %}
+                                <p>{{ element }}</p>
+                            {% endfor %}
+                        {% else %}
+                            <p>
+                                {{ one.EX.content }}
+                            </p>
+                            <ul>
+                                {% for element in one.nd_con.splitlines() %}
+                                    <li>{{ element }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% for hot in hots %}
+                                <iframe src="{{ hot.vdo_link }}"
+                                        width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                            {% endfor %}
+                            {% for element in one.rd_con.splitlines() %}
+                                <p>{{ element }}</p>
+                            {% endfor %}
+                        {% endif %}
+                        {% endfor %}
+                        {% else %}
                         {% for one in body %}
                         {% if one.nd_con == None %}
                             {% for element in one.EX.content.splitlines() %}
@@ -55,6 +80,7 @@
                             {% endfor %}
                         {% endif %}
                         {% endfor %}
+                        {% endif %}
                         {% if table == '科技焦點' %}
                             {% for new in news %}
                                 <p>

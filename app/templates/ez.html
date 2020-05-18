@@ -27,6 +27,17 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12 text-center banner-ads">
+            {% for ad in ads %}
+                <a href="{{ ad.url }}">
+                    <img src="{{ url_for('static', filename=ad.picture_name) }}">
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -103,7 +114,7 @@
                             {% for news in hot %}
                             {% if loop.index % 2 == 0 %}
                                 <div class="col-md-6">
-                                    <a href="{{ url_for(news.VDO.url) }}" class="table-card text-center">
+                                    <a href="{{ url_for(news.VDO.url, picture=news.picture_name, content=news.VDO.title) }}" class="table-card text-center">
                                         <div class="card" style="display: inline-block; width: 100%; height: 100%;">
                                             <div class="table-image">
                                                 <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">
@@ -120,7 +131,7 @@
                             <div class="row">
                             {% else %}
                                 <div class="col-md-6">
-                                    <a href="{{ url_for(news.VDO.url) }}" class="table-card text-center">
+                                    <a href="{{ url_for(news.VDO.url, picture=news.picture_name, content=news.VDO.title) }}" class="table-card text-center">
                                         <div class="card" style="display: inline-block; width: 100%; height: 100%;">
                                             <div class="table-image">
                                                 <img src="{{ url_for('static', filename=news.picture_name) }}" class="img-responsive center-block">

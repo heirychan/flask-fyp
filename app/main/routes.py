@@ -97,6 +97,7 @@ def tfb(content, picture):
     if table == "":
         for result in hot:
             table = result.st_cat
+        hots = Video.query.filter_by(picture_name=picture).all()
         news = Video.query.filter(~Video.picture_name.in_([picture])).order_by(func.random()).limit(2)
     if table == "":
         for result in network:
@@ -115,7 +116,7 @@ def tfb(content, picture):
             table = result.st_cat
         news = Ittime.query.filter(~Ittime.picture_name.in_([picture])).order_by(func.random()).limit(2)
     return render_template('TFocus/TFB.html', title=_('E-Zone'), all=all, ads=ads, adsb=adsb, body=body,
-                           content=content, picture=picture, news=news, table=table)
+                           content=content, picture=picture, news=news, table=table, hots=hots)
 
 
 @bp.route('/', methods=['GET', 'POST'])
@@ -169,12 +170,6 @@ def fever():
 @login_required
 def sptmask():
     return render_template('video/sptmask.html', title=_('sptmask'))
-
-
-@bp.route('/seveneleven', methods=['GET', 'POST'])
-@login_required
-def seveneleven():
-    return render_template('Network/life/7-11.html', title=_('7-11'))
 
 
 @bp.route('/intel', methods=['GET', 'POST'])
@@ -255,18 +250,6 @@ def sama31():
     return render_template('evaluation/newtest/sama31.html', title=_('Samsung Galaxy A31'))
 
 
-@bp.route('/omask', methods=['GET', 'POST'])
-@login_required
-def omask():
-    return render_template('Network/hot/omask.html', title=_('開窿口罩'))
-
-
-@bp.route('/av', methods=['GET', 'POST'])
-@login_required
-def av():
-    return render_template('Network/hot/av.html', title=_('睇 AV 出「意外」！'))
-
-
 @bp.route('/computer', methods=['GET', 'POST'])
 @login_required
 def computer():
@@ -277,12 +260,6 @@ def computer():
 @login_required
 def featured():
     return render_template('editor/featured.html', title=_('未來戰士'))
-
-
-@bp.route('/dyson', methods=['GET', 'POST'])
-@login_required
-def dyson():
-    return render_template('Network/life/dyson.html', title=_('Dyso33n 旗艦體'))
 
 
 @bp.route('/explore')
