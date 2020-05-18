@@ -52,7 +52,7 @@
                         {% for new in tech %}
                             <p>
                                 【相關報道】
-                                <a href="{{ url_for(new.TF.url) }}">{{ new.TF.title }}</a>
+                                <a href="{{ url_for(new.TF.url, picture=new.picture_name, content=new.TF.title) }}">{{ new.TF.title }}</a>
                             </p>
                         {% endfor %}
                         <div class="text-center banner-ads">

@@ -147,30 +147,6 @@ def seveneleven():
     return render_template('Network/life/7-11.html', title=_('7-11'))
 
 
-@bp.route('/intel10', methods=['GET', 'POST'])
-@login_required
-def intel10():
-    return render_template('TFocus/PC/intel10.html', title=_('intel10'))
-
-
-@bp.route('/winup', methods=['GET', 'POST'])
-@login_required
-def winup():
-    return render_template('TFocus/PC/winup.html', title=_('Windowupdate'))
-
-
-@bp.route('/sm', methods=['GET', 'POST'])
-@login_required
-def sm():
-    return render_template('TFocus/phone/sm.html', title=_('Samsung'))
-
-
-@bp.route('/ipxs', methods=['GET', 'POST'])
-@login_required
-def ipxs():
-    return render_template('TFocus/phone/ipxs.html', title=_('IPhoneXS'))
-
-
 @bp.route('/intel', methods=['GET', 'POST'])
 @login_required
 def intel():
