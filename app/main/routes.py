@@ -97,7 +97,6 @@ def tfb(content, picture):
     if table == "":
         for result in hot:
             table = result.st_cat
-        hots = Video.query.filter_by(picture_name=picture).all()
         news = Video.query.filter(~Video.picture_name.in_([picture])).order_by(func.random()).limit(2)
     if table == "":
         for result in network:
@@ -116,7 +115,7 @@ def tfb(content, picture):
             table = result.st_cat
         news = Ittime.query.filter(~Ittime.picture_name.in_([picture])).order_by(func.random()).limit(2)
     return render_template('TFocus/TFB.html', title=_('E-Zone'), all=all, ads=ads, adsb=adsb, body=body,
-                           content=content, picture=picture, news=news, table=table, hots=hots)
+                           content=content, picture=picture, news=news, table=table, hot=hot)
 
 
 @bp.route('/', methods=['GET', 'POST'])

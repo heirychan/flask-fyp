@@ -51,8 +51,8 @@
                                     <li>{{ element }}</li>
                                 {% endfor %}
                             </ul>
-                            {% for hot in hots %}
-                                <iframe src="{{ hot.vdo_link }}"
+                            {% for one in hot %}
+                                <iframe src="{{ one.vdo_link }}"
                                         width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
                             {% endfor %}
                             {% for element in one.rd_con.splitlines() %}
