@@ -114,15 +114,8 @@ def tfb(content, picture):
         for result in itttime:
             table = result.st_cat
         news = Ittime.query.filter(~Ittime.picture_name.in_([picture])).order_by(func.random()).limit(2)
-    return render_template('TFocus/TFB.html', title=_('E-Zone'), all=all, ads=ads, adsb=adsb, body=body,
+    return render_template('TFB.html', title=_('E-Zone'), all=all, ads=ads, adsb=adsb, body=body,
                            content=content, picture=picture, news=news, table=table, hot=hot)
-
-
-@bp.route('/', methods=['GET', 'POST'])
-@bp.route('/flous ', methods=['GET', 'POST'])
-@login_required
-def flous():
-    return render_template('flous.html', title=_('E-Zone'))
 
 
 @bp.route('/index', methods=['GET', 'POST'])
@@ -148,19 +141,16 @@ def index():
 
 
 @bp.route('/Sumikko Gurashi', methods=['GET', 'POST'])
-@login_required
 def sg():
     return render_template('reward/sg.html', title=_('角落小夥伴'))
 
 
 @bp.route('/computer', methods=['GET', 'POST'])
-@login_required
 def computer():
     return render_template('special/computer.html', title=_('香港電腦通訊節'))
 
 
 @bp.route('/featured', methods=['GET', 'POST'])
-@login_required
 def featured():
     return render_template('editor/featured.html', title=_('未來戰士'))
 
